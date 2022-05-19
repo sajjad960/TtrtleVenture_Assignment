@@ -1,0 +1,14 @@
+.App {
+  text-align: center !important;
+  margin-top: 10% !important;
+}
+
+
+
+/* Radio widget style zone */
+.radio_widget_container {
+  display: inline-block;
+  background-color: rgb(43, 102, 154);
+  height: 10rem;
+  width: 15rem;
+}
