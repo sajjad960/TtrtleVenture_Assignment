@@ -20,7 +20,6 @@ const AllStations = () => {
         let mount: boolean = false;
         if (!mount) {
             getAllStation()
-            // getSingleStation(1)
 
         }
 
