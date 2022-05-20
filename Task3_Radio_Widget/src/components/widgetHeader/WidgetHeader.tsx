@@ -26,7 +26,10 @@ const Wrapper = styled.div`
     font-size: 1.2rem;
     display: block;
     border-radius: 20px 20px 0 0;
-    background-color: #eca95b;
+    /* background-color: #eca95b; */
+    background-color: var(--primary-color);;
+    
+
 
     .radio_controlling {
         display: flex;

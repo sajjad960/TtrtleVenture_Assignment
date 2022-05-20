@@ -97,7 +97,7 @@ display: block;
         display: flex;
         font-size: 1.1rem;
         justify-content: space-between;
-        color: #a1b3b9;
+        color: var(--text-color);
         padding: 1rem 1rem .5rem .5rem;
         cursor: pointer;
         /* border-bottom: 1px solid #a1b3b941; */

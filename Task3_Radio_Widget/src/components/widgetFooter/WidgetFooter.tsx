@@ -32,14 +32,14 @@ border-top: 1px solid #a1b3b941;
     &_txt {
         padding: .7rem 0 0 0;
         font-size: .6rem;
-        color: #eca95b;
+        color: var(--primary-color);
         text-transform: uppercase;
         
     }
     &_channel {
         font-size: 1.1rem;
         font-weight: 700;
-        color: #a1b3b9;
+        color: var(--text-color);
     }
 }
 `;

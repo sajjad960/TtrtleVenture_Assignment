@@ -1,3 +1,8 @@
+:root {
+  --primary-color: #eca95b;
+  --text-color: #a1b3b9;
+}
+
 * {
   margin: 0;
   padding: 0;
