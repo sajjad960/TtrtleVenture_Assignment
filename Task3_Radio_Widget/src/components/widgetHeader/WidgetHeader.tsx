@@ -32,20 +32,27 @@ const Wrapper = styled.div`
         display: flex;
         justify-content: space-between;
         align-items: center;
+        background-color: inherit;
 
         &-img {
             width: 1.1rem;
             height: 100%;
+            background-color: inherit;
+
 
             &--backarrow {
                 width: .7rem;
                 height: 100%;
+                background-color: inherit;
+
             }
         }
         &-txt {
             text-transform: uppercase;
             font-size: 1.1rem;
             color: white;
+            background-color: inherit;
+
         }
     }
 

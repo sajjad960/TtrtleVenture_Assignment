@@ -6,7 +6,7 @@ import { Action, ActionType } from './stationActions';
 export interface stationState {
     allStation: Array<Object>;
     singleStation: Array<Object>;
-    loading: String;
+    loading: Boolean;
     error: String;
 }
 
@@ -15,27 +15,27 @@ export interface stationState {
 const initialState: stationState = {
     allStation: [],
     singleStation: [],
-    loading: '',
+    loading: false,
     error: '',
 };
 
 const stationReducer = (state = initialState, action: Action) => {
     switch (action.type) {
-        case ActionType.GET_ALL_STATION:
+        case ActionType?.GET_ALL_STATION:
             return {
                 ...state,
-                allStation: action.payload ?? StaticStations,
+                allStation: action?.payload ?? StaticStations,
             };
-        //   case ActionType.AUTH_ERROR_MESSAGE:
-        //     return {
-        //       ...state,
-        //       authError: action.payload,
-        //     };
-        //   case ActionType.AUTH_TOKEN:
-        //     return {
-        //       ...state,
-        //       token: action.payload,
-        //     };
+        case ActionType?.LOADING:
+            return {
+                ...state,
+                loading: true,
+            };
+        case ActionType?.ERROR:
+            return {
+                ...state,
+                Error: 'Something is rong'
+            };
         default:
             return state;
     }

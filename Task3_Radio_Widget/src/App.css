@@ -8,8 +8,8 @@
 /* Radio widget style zone */
 .radio_widget_container {
   display: inline-block;
-  background-color: rgb(43, 102, 154);
-  height: 10rem;
+  background-color: rgba(40, 40, 40, 0.852);
+  height: 23rem;
   width: 18rem;
   border-radius: 20px;
 }

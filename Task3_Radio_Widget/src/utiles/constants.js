@@ -15,18 +15,18 @@ export const StaticStations = [
         id: 3,
         Image: 'station.png',
         name: "Doge FM",
-        text: "99,4",
+        channel: "99,4",
     },
     {
         id: 4,
         Image: 'station.png',
         name: "Ballands",
-        text: "87,1",
+        channel: "87,1",
     },
     {
         id: 5,
         Image: 'station.png',
         name: "Maximum",
-        text: "142,2",
+        channel: "142,2",
     },
 ];
