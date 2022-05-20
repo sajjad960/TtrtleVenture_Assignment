@@ -11,8 +11,8 @@ const rootReducers = combineReducers({
 
 export default rootReducers;
 
-// //This RootState is required to use useSelector later on
-// export type RootState = ReturnType<typeof rootReducers>;
+//This RootState is required to use useSelector later on
+export type RootState = ReturnType<typeof rootReducers>;
 
-// // made a custom app selector to grab state value from reducer
-// export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
+// made a custom app selector to grab state value from reducer
+export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;

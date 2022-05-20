@@ -6,3 +6,4 @@ export function modeChecker() {
 
     return hostAddress;
 }
+
