@@ -25,6 +25,7 @@ const stationReducer = (state = initialState, action: Action) => {
             return {
                 ...state,
                 allStation: action?.payload ?? StaticStations,
+                loading: false,
             };
         case ActionType?.LOADING:
             return {
@@ -34,7 +35,8 @@ const stationReducer = (state = initialState, action: Action) => {
         case ActionType?.ERROR:
             return {
                 ...state,
-                Error: 'Something is rong'
+                Error: 'Something is rong',
+                loading: false,
             };
         default:
             return state;

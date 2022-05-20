@@ -20,7 +20,10 @@ const AllStations = () => {
         }
     }, [])
 
-    console.log(allStation, loading, error, "check");
+    if (loading) return (
+        <h3>Loading...</h3>
+    )
+
     return (
         <Wrapper>
             <div className="station_container">
