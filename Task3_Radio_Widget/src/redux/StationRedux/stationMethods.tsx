@@ -9,9 +9,14 @@ const { dispatch } = store;
 //get all station
 export const getAllStation = async () => {
     try {
+        //start loading
+        dispatch({ type: ActionType.LOADING, payload: true })
+
+        // When We have api we just pass here payload with dynamic data
+        dispatch({ type: ActionType.GET_ALL_STATION, payload: null })
 
     } catch (error: any) {
-
+        dispatch({ type: ActionType.ERROR })
     }
 };
 

@@ -1,3 +1,4 @@
+
 //all auth related Action type will be defined here
 export enum ActionType {
     GET_ALL_STATION = 'GET_ALL_STATION',
@@ -12,6 +13,7 @@ export enum ActionType {
 
 interface actionGetAllStation {
     type: ActionType.GET_ALL_STATION;
+    payload: any;
 }
 
 interface actionGetSingleStation {
@@ -23,10 +25,12 @@ interface loading {
     type: ActionType.LOADING;
     payload: boolean;
 }
-interface ERROR {
+interface error {
     type: ActionType.ERROR;
 }
 
 export type Action =
     | actionGetAllStation
-    | actionGetSingleStation;
+    | actionGetSingleStation
+    | loading
+    | error;

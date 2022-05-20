@@ -1,4 +1,5 @@
 //bring action with type
+import { StaticStations } from '../../utiles/constants';
 import { Action, ActionType } from './stationActions';
 
 //define state variable with their type
@@ -20,11 +21,11 @@ const initialState: stationState = {
 
 const stationReducer = (state = initialState, action: Action) => {
     switch (action.type) {
-        //   case ActionType.SIGN_IN_LOADING:
-        //     return {
-        //       ...state,
-        //       signIn_loader: action.payload,
-        //     };
+        case ActionType.GET_ALL_STATION:
+            return {
+                ...state,
+                allStation: action.payload ?? StaticStations,
+            };
         //   case ActionType.AUTH_ERROR_MESSAGE:
         //     return {
         //       ...state,
