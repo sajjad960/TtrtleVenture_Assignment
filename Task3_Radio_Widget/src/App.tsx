@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import store from './redux/store'
 
 
+
 //Components
 import WidgetBody from './components/widgetBody/WidgetBody';
 import WidgetFooter from './components/widgetFooter/WidgetFooter';
