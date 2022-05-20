@@ -5,7 +5,7 @@ const app = express();
 const cors = require('cors');
 const xss = require('xss-clean');
 const hpp = require('hpp');
-const mongoSanitize = require('hpp');
+const mongoSanitize = require('express-mongo-sanitize');
 
 
 
