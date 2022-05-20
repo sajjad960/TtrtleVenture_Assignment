@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import { Provider } from 'react-redux';
+
 
 //Components
 import WidgetBody from './components/widgetBody/WidgetBody';
@@ -10,11 +12,13 @@ import WidgetHeader from './components/widgetHeader/WidgetHeader';
 function App() {
   return (
     <div className="App">
-      <main className="radio_widget_container">
-        <WidgetHeader />
-        <WidgetBody />
-        <WidgetFooter />
-      </main>
+      <Provider store={store}>
+        <main className="radio_widget_container">
+          <WidgetHeader />
+          <WidgetBody />
+          <WidgetFooter />
+        </main>
+        <Provider />
     </div>
   );
 }
