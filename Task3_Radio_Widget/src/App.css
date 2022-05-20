@@ -10,5 +10,12 @@
   display: inline-block;
   background-color: rgb(43, 102, 154);
   height: 10rem;
-  width: 15rem;
+  width: 18rem;
+  border-radius: 20px;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
