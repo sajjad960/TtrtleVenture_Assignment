@@ -14,7 +14,7 @@ export const StaticStations = [
     {
         id: 3,
         Image: 'station.png',
-        name: "Doge FM",
+        name: "Doge",
         channel: "99,4",
     },
     {

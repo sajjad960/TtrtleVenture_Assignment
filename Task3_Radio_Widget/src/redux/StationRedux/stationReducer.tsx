@@ -6,6 +6,7 @@ import { Action, ActionType } from './stationActions';
 export interface stationState {
     allStation: Array<Object>;
     singleStation: Object;
+    playingStation: Object;
     loading: Boolean;
     error: String;
 }
@@ -15,6 +16,7 @@ export interface stationState {
 const initialState: stationState = {
     allStation: [],
     singleStation: {},
+    playingStation: {},
     loading: false,
     error: '',
 };
@@ -28,13 +30,11 @@ const stationReducer = (state = initialState, action: Action) => {
                 loading: false,
             };
         case ActionType?.GET_SINGLE_STATION:
-            // const selectedStation = state?.allStation.find((station: any) => station.id === action?.payload
-            // );
-            // console.log(selectedStation, action?.payload);
+            const selectedStation = state?.allStation.find((station: any) => station.id === action?.payload);
             return {
                 ...state,
-                singleStation: state?.allStation.find((station: any) => station.id === action?.payload
-                ),
+                singleStation: selectedStation,
+                playingStation: selectedStation,
                 loading: false,
             };
         case ActionType?.LOADING:

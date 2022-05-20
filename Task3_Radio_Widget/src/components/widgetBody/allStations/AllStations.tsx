@@ -3,9 +3,13 @@ import { shallowEqual } from 'react-redux';
 import styled from 'styled-components';
 import { useAppSelector } from '../../../redux/root_Reducer';
 import { getAllStation, getSingleStation } from '../../../redux/StationRedux/stationMethods';
+import { modeChecker } from '../../../utiles/helpers';
 
 
 const AllStations = () => {
+
+    const hostAddress = modeChecker();
+
     const { allStation, singleStation, loading, error } = useAppSelector(
         state => state.stationReducer,
         shallowEqual,
@@ -39,12 +43,33 @@ const AllStations = () => {
     return (
         <Wrapper>
             <div className="station_container">
-                S
                 {allStation.map((station: any) => {
                     return (
-                        <div className="station_container-single" key={station?.id} onClick={() => OpenStation(station?.id)}>
-                            <span>{station?.name} FM</span>
-                            <span className='station_container-single--channel'>{station?.channel}</span>
+                        <div key={station?.id}>
+
+                            {/* when a channel play(Clicked) then show it START */}
+                            {station.id === selectedStation && (
+                                <div className="station_container-playing">
+                                    <button>
+                                        <img src={`${hostAddress}/minus.png`} alt="Increase channel" className="station_container-playing--minus" />
+                                    </button>
+
+                                    <>
+                                        <img src={`${hostAddress}/${station?.Image}`} alt="Increase channel" className="station_container-playing--logo" />
+                                    </>
+
+                                    <button>
+                                        <img src={`${hostAddress}/plus.png`} alt="Increase channel" className="station_container-playing--plus" />
+                                    </button>
+                                </div>
+                            )}
+                            {/* when a channel playing then show it ENG */}
+
+                            {/* Show all channel START */}
+                            <div className="station_container-single" onClick={() => OpenStation(station?.id)}>
+                                <span>{station?.name} FM</span>
+                                <span className='station_container-single--channel'>{station?.channel}</span>
+                            </div>
                         </div>
 
                     )
@@ -61,7 +86,7 @@ display: block;
 
 .station_container {
     overflow-y: scroll;
-    overflow-x: none;
+    overflow-x: hidden;
     height: 15rem;
     width: 17rem;
     &-single {
@@ -77,6 +102,23 @@ display: block;
             font-weight: 900;
             
         }
+    }
+
+    &-playing {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .5rem 1rem;
+
+        img {
+            width: 1.5rem;
+            height: 100%;
+        }
+        &--logo {
+            width: 6rem !important;
+            height: 100%;
+        }
+
     }
 }
 
