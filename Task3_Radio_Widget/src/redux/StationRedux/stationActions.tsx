@@ -18,6 +18,8 @@ interface actionGetAllStation {
 
 interface actionGetSingleStation {
     type: ActionType.GET_SINGLE_STATION;
+    payload: any;
+
 }
 
 // Loading and error

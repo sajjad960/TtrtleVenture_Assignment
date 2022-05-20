@@ -21,10 +21,16 @@ export const getAllStation = async () => {
 };
 
 //get single station
-export const getSingleStation = async () => {
+export const getSingleStation = async (id: any) => {
+
     try {
+        //start loading
+        dispatch({ type: ActionType?.LOADING, payload: true })
+
+        // When We have api we need to get responce with id and pass it into the payload
+        dispatch({ type: ActionType?.GET_SINGLE_STATION, payload: id })
 
     } catch (error: any) {
-
+        dispatch({ type: ActionType?.ERROR })
     }
 };
