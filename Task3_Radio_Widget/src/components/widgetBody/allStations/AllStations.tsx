@@ -45,7 +45,7 @@ const AllStations = () => {
             <div className="station_container">
                 {allStation.map((station: any) => {
                     return (
-                        <div key={station?.id}>
+                        <div className='station_container_key' key={station?.id}>
 
                             {/* when a channel play(Clicked) then show it START */}
                             {station.id === selectedStation && (
@@ -84,19 +84,27 @@ padding: .5rem .8rem !important;
 display: block;
 
 
+
 .station_container {
     overflow-y: scroll;
     overflow-x: hidden;
     height: 15rem;
     width: 17rem;
+
+    &_key:not(:last-child) {
+        border-bottom: 1px solid #a1b3b941;
+    }
     &-single {
         display: flex;
         font-size: 1.1rem;
         justify-content: space-between;
         color: #a1b3b9;
         padding: 1rem 1rem .5rem .5rem;
-        border-bottom: 1px solid #a1b3b941;
         cursor: pointer;
+        /* border-bottom: 1px solid #a1b3b941; */
+        &:not(:last-child) {
+
+        }
 
         &--channel {
             font-weight: 900;
