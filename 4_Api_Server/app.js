@@ -10,7 +10,7 @@ const mongoSanitize = require('express-mongo-sanitize');
 
 
 // Routers
-// const stationRouter = require("./routes/stationRoutes");
+const stationRouter = require("./routes/stationRoutes");
 const userRouter = require('./routes/userRoutes')
 
 
@@ -47,8 +47,8 @@ app.use(
 
 
 //Routes
+app.use("/api/v1/stations", stationRouter);
 app.use('/api/v1/users', userRouter);
-// app.use("/api/v1/stations", stationRouter);
 
 
 app.all("*", (req, res, next) => {
