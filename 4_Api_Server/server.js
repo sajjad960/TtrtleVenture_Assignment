@@ -5,7 +5,7 @@ dotenv.config({ path: `${__dirname}/config.env` });
 
 const app = require("./app");
 
-// Local DB
+// Database Connection
 mongoose.connect(process.env.LOCAL_DATABASE, { useNewUrlParser: true }).then(() => console.log("DB connection successful"))
 
 
