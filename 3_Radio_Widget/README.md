@@ -6,5 +6,5 @@ npm start
 ```
 
 ## Node Js version
-Checked - 16
-Checked - 14
+* Checked - 16
+* Checked - 14
