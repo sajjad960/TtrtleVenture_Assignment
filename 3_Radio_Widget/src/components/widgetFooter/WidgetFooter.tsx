@@ -5,7 +5,8 @@ import { useAppSelector } from '../../redux/root_Reducer';
 
 
 const WidgetFooter = () => {
-    const { playingStation, loading, error } = useAppSelector(
+    // getting data from redux store
+    const { playingStation } = useAppSelector(
         state => state.stationReducer,
         shallowEqual,
     );

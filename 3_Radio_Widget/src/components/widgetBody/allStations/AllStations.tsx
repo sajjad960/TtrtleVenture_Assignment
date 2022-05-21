@@ -8,14 +8,17 @@ import { modeChecker } from '../../../utiles/helpers';
 
 const AllStations = () => {
 
+    // Host adress for load image from public
     const hostAddress = modeChecker();
 
-    const { allStation, singleStation, loading, error } = useAppSelector(
+    // Get data from redux store
+    const { allStation, loading } = useAppSelector(
         state => state.stationReducer,
         shallowEqual,
     );
     const [selectedStation, setselectedStation] = useState(null);
 
+    // Fetch all station and show
     useEffect(() => {
         let mount: boolean = false;
         if (!mount) {
@@ -29,12 +32,13 @@ const AllStations = () => {
     }, [])
 
 
-    const OpenStation = (id: any) => {
+    // play station
+    const PlayStation = (id: any) => {
         getSingleStation(id)
         setselectedStation(id);
-
     }
 
+    // show loading
     if (loading) return (
         <h3>Loading...</h3>
     )
@@ -62,10 +66,10 @@ const AllStations = () => {
                                     </button>
                                 </div>
                             )}
-                            {/* when a channel playing then show it ENG */}
+                            {/* when a channel playing then show it END */}
 
                             {/* Show all channel START */}
-                            <div className="station_container-single" onClick={() => OpenStation(station?.id)}>
+                            <div className="station_container-single" onClick={() => PlayStation(station?.id)}>
                                 <span>{station?.name} FM</span>
                                 <span className='station_container-single--channel'>{station?.channel}</span>
                             </div>

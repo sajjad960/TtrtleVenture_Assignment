@@ -4,6 +4,7 @@ import { modeChecker } from '../../utiles/helpers';
 
 
 const WidgetHeader = () => {
+    // Host address helping to load image from public folder
     const hostAddress = modeChecker();
     return (
         <Wrapper>
