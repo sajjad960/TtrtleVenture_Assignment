@@ -2,10 +2,9 @@ import { combineReducers } from 'redux';
 import { useSelector, TypedUseSelectorHook } from 'react-redux';
 // our all reducer goes here,
 import stationReducer from './StationRedux/stationReducer'
-//create Reducers will give you ability to work with one to more reducers with
-//their action
+
 const rootReducers = combineReducers({
-    //auth reducer define here
+    // station reducer
     stationReducer,
 });
 
