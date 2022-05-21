@@ -6,7 +6,7 @@ dotenv.config({ path: `${__dirname}/config.env` });
 const app = require("./app");
 
 // Local DB
-mongoose.connect(process.env.LOCAL_DATABASE).then(() => console.log("DB connection successful"))
+mongoose.connect(process.env.LOCAL_DATABASE, { useNewUrlParser: true }).then(() => console.log("DB connection successful"))
 
 
 const port = process.env.PORT || 5000;
