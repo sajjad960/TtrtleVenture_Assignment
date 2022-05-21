@@ -10,6 +10,5 @@ import rootReducers from './root_Reducer';
 //define our store with all reducers
 const store = createStore(rootReducers);
 
-//get our all dispatch
 
 export default store;
