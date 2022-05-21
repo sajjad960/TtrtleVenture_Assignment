@@ -6,9 +6,11 @@ const stationSchema = new mongoose.Schema({
     stationName: {
         type: String,
         required: true,
+        unique: true,
     },
     stationChannel: {
         type: String,
+        unique: true,
     },
     Image: {
         type: String,
@@ -17,7 +19,7 @@ const stationSchema = new mongoose.Schema({
 })
 
 // created unique index for stationName and StationChannel. 
-stationSchema.index({ stationName: 1, stationChannel: 1 }, { unique: true })
+// stationSchema.index({ stationName: 1, stationChannel: 1 }, { unique: true })
 
 const Stations = mongoose.model('Stations', stationSchema)
 

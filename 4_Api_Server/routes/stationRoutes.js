@@ -7,8 +7,8 @@ const router = express.Router();
 
 router.get('/', stationController.getAllStation);
 router.post('/', stationController.createStation);
-router.patch('/', stationController.updateStation);
-router.delete('/', stationController.deleteStation);
+router.patch('/:id', stationController.updateStation);
+router.delete('/:id', stationController.deleteStation);
 
 
 
