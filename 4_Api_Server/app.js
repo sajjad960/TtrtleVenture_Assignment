@@ -11,6 +11,7 @@ const mongoSanitize = require('express-mongo-sanitize');
 
 // Routers
 const stationRouter = require("./routes/stationRoutes");
+const userRouter = require('./routes/userRoutes')
 
 
 // Errors
@@ -46,6 +47,7 @@ app.use(
 
 
 //Routes
+app.use('/api/v1/users', userRouter);
 app.use("/api/v1/stations", stationRouter);
 
 
