@@ -1,6 +1,7 @@
 ## Guide Line
 I used MVC Pattern here.
-
+## Authentication
+I used JSON WEB TOKEN (jwt) here.
 ## Installation and start
 
 ```
